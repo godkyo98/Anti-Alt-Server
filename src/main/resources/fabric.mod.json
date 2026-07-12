@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "kyo-anti-alt",
+	"version": "${version}",
+	"name": "Kyo Anti-Alt",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Kyo"
+	],
+	"contact": {
+		"homepage": "http://kyo-series-and-game.web.app/",
+		"sources": "https://github.com/godkyo98/Anti-Alt-Server"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/kyo-anti-alt/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"kyo.anti.alt.KyoAntiAlt"
+		],
+		"client": [
+			"kyo.anti.alt.client.KyoAntiAltClient"
+		]
+	},
+	"mixins": [
+		"kyo-anti-alt.mixins.json",
+		{
+			"config": "kyo-anti-alt.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
